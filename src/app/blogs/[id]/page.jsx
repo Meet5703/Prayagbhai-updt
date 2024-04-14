@@ -35,19 +35,20 @@ const BlogId = () => {
             <p className="text-3xl text-center">{blog.title}</p>
             <img src={`/uploads/${blog.coverImg}`} alt="blog" />
             <p>{blog.content}</p>
+            <br />
 
             <p>{blog.heading1}</p>
             <p>{blog.description1}</p>
-
+            <br />
             <p>{blog.heading2}</p>
             <p>{blog.description2}</p>
-
+            <br />
             <p>{blog.heading3}</p>
             <p>{blog.description3}</p>
-
+            <br />
             <p>{blog.heading4}</p>
             <p>{blog.description4}</p>
-
+            <br />
             <p>{blog.heading5}</p>
             <p>{blog.description5}</p>
           </>
