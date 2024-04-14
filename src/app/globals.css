@@ -1,0 +1,166 @@
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+@import url("https://fonts.googleapis.com/css2?family=Lato:ital,wght@0,100;0,300;0,400;0,700;0,900;1,100;1,300;1,400;1,700;1,900&family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: "Lato", sans-serif;
+  font-weight: 700;
+  font-style: normal;
+
+  background-color: #f7f2f8;
+}
+
+.material-symbols-outlined {
+  font-variation-settings: "FILL" 1, "wght" 400, "GRAD" 0, "opsz" 24;
+}
+
+.carousel {
+  animation: infinite-scroll 90s linear infinite;
+}
+
+.carousel:hover {
+  animation-play-state: paused;
+}
+
+@keyframes infinite-scroll {
+  0% {
+    transform: translateX(0%);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}
+/* Start Button 1 */
+a {
+  text-decoration: none;
+}
+
+.ov-btn-slide-left {
+  background: #fff;
+  color: #530fb8;
+  border: 2px solid #530fb8;
+  border-radius: 3px;
+  padding: 2px 8px;
+  position: relative;
+  z-index: 1;
+  overflow: hidden;
+  display: inline-block;
+}
+
+.ov-btn-slide-left:hover {
+  color: #fff;
+}
+
+.ov-btn-slide-left::after {
+  content: "";
+  background: #530fb8;
+  position: absolute;
+  z-index: -1;
+  padding: 2px 8px;
+  display: block;
+  top: 0;
+  bottom: 0;
+  left: -100%;
+  right: 100%;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+
+.ov-btn-slide-left:hover::after {
+  left: 0;
+  right: 0;
+  top: 0;
+  bottom: 0;
+  -webkit-transition: all 0.35s;
+  transition: all 0.35s;
+}
+/* End Button 1 */
+
+.marquee-slider {
+  overflow: hidden;
+}
+
+.marquee-slider > div {
+  flex-shrink: 0;
+}
+
+/* Testimonial card styles
+.testimonial-card {
+  min-width: 300px;
+  max-width: 400px;
+} */
+
+.testimonial-slider {
+  width: 100%;
+  max-width: 800px; /* Adjust max-width as needed */
+  margin: 0 auto;
+}
+
+.testimonial-card {
+  background-color: #f0f0f0;
+  padding: 20px;
+  border-radius: 10px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.1);
+}
+
+.testimonial-text {
+  font-size: 18px;
+  font-weight: bold;
+}
+
+.testimonial-author {
+  font-size: 16px;
+  color: #666;
+  margin-top: 10px;
+}
+
+@media (min-width: 768px) {
+  .ov-btn-slide-left {
+    background: #fff;
+    color: #530fb8;
+    border: 2px solid #530fb8;
+    padding: 10px 10px;
+    border-radius: 3px;
+    position: relative;
+    z-index: 1;
+    overflow: hidden;
+    display: inline-block;
+  }
+
+  .ov-btn-slide-left:hover {
+    color: #fff;
+  }
+
+  .ov-btn-slide-left::after {
+    content: "";
+    background: #530fb8;
+    position: absolute;
+    z-index: -1;
+    padding: 16px 20px;
+    display: block;
+    top: 0;
+    bottom: 0;
+    left: -100%;
+    right: 100%;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+
+  .ov-btn-slide-left:hover::after {
+    left: 0;
+    right: 0;
+    top: 0;
+    bottom: 0;
+    -webkit-transition: all 0.35s;
+    transition: all 0.35s;
+  }
+}
+
+@media (max-width: 768px) {
+  .carousel {
+    animation: infinite-scroll 30s linear infinite; /* Animation duration for smaller screens */
+  }
+}
